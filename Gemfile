@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'pry'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'tweetstream'

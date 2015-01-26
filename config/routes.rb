@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   resources :articles
 
   match "auth/:provider/callback" => "sessions#create" , via: [:get, :post]
+  match "/signout" => "sessions#destroy", via: [:get, :post], :as => "signout"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
