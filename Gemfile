@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 
+gem 'figaro'
+gem 'pry'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'tweetstream'
@@ -37,6 +39,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+	
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
