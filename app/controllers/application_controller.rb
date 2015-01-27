@@ -11,11 +11,6 @@ class ApplicationController < ActionController::Base
   	raise request.env["omniauth.auth"].to_yaml
   end
 
-  def index
-  	render "/layouts/application"
-  end
-
-
   private 
 
   def current_user 

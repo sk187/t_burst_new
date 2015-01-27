@@ -48,12 +48,11 @@ ActiveRecord::Schema.define(version: 20150126202645) do
   add_index "matches", ["winning_player_id"], name: "index_matches_on_winning_player_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",                     null: false
-    t.string   "uid",                      null: false
-    t.string   "provider",                 null: false
-    t.boolean  "oauth_callback_confirmed", null: false
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.string   "name",       null: false
+    t.string   "uid",        null: false
+    t.string   "provider",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
