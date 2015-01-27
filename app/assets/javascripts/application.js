@@ -13,7 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .
+
 
 var object = {
 	hashtag_one_body : "#hello",
@@ -39,12 +41,3 @@ $.ajax({
 });
 
 
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
->>>>>>> d7a15bb5abe0cb455555a6900d1aeaf2a31ea402

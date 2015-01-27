@@ -2,28 +2,37 @@
 <h1>TwitterBURST!</h1>
 </div>
 
+<div class="container">
 
-<div class="nav">
-			<ul>
-				<li class="user_leaderboard"><a href="/">User Leaderboard</a></li>
-				<li class="hashtag_leaderboard"><a href="/">Hashtag Leaderboard</a></li>
-				<li class="your_stats"><a href="/">Your Stats</a></li>
-				<li class="user_nav">
-					<% if current_user %>
-						<%= link_to "Sign Out", signout_path %>
-					<%else%>
-						<%= link_to "Sign in With Twitter", "/auth/twitter" %>
-					<% end %>
-				</li>
+	<div class="nav">
+		<ul>
+			<li class="user_leaderboard"><a href="/">User Leaderboard</a></li>
+			<li class="hashtag_leaderboard"><a href="/">Hashtag Leaderboard</a></li>
+			<li class="your_stats"><a href="/">Your Stats</a></li>
+			<li class="user_nav">
+				<% if current_user %>
+					<%= link_to "Sign Out", signout_path %>
+				<%else%>
+					<%= link_to "Sign in With Twitter", "/auth/twitter" %>
+				<% end %>
+			</li>
 
-			</ul>
+		</ul>
+	</div>
+
+
+	<div class="circle-set clear">
+
+		<div class="circle" id="circle1" name="user1">
+			<p class="hash-tag" id="hash1">
+			</p>
 		</div>
 
-
-	<div class="circle-set">
-		<div id="circle" name="user1"></div>
 	
-		<div id="circle" name="user2"></div>
+		<div class="circle" id="circle2" name="user2">			<p class="hash-tag" id="hash2">
+			</p>
+		</div>
+
 	</div>
 
 <div><%= @user.inspect %> </div>
@@ -38,11 +47,4 @@
   </div> -->
 				<button class="ticker2" name="ticker2"> <a href="#">Ticker 2</a></button>
 			</div>
-		</section>
-
-
-
-
-  
-
 

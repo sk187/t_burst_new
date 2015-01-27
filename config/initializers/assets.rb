@@ -2,7 +2,12 @@
 
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
+<<<<<<< HEAD
 Rails.application.config.assets.precompile += %w(rebecca.js) 
+=======
+Rails.application.config.assets.precompile += %w(computer.js)
+
+>>>>>>> 999054e5b560df1bd063a36f8e0eb0535256ff68
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 
