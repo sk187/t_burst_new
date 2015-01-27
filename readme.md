@@ -1,5 +1,5 @@
 <h2>TwitterBURST</h2>
-
+TwitterBURST is a head-to-head hashtag competition in which each user enters a hashtag and whichever one gets the most tweets over the course of a certain length of time wins. 
 
 <h4>User Stories</h4>
 <ul>
