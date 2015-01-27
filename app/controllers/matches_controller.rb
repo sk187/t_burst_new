@@ -3,6 +3,8 @@ require 'pry'
 class MatchesController < ApplicationController
   
   def show
+  	@wins = 
+
   end
 
   def create
