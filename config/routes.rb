@@ -8,8 +8,9 @@ Rails.application.routes.draw do
 
   resources :application, only: [:create]
 
-  match "auth/:provider/callback" => "sessions#create" , via: [:get, :post]
-  match "/signout" => "sessions#destroy", via: [:get, :post], :as => "signout"
+  get '/signout', to: 'sessions#destroy', :as => "signout"
+  get 'auth/:provider/callback', to: 'sessions#create'
+  
 
 
 end
