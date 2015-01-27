@@ -4,6 +4,7 @@ class MatchesController < ApplicationController
   end
 
   def create
+  	#need strong params
   end
 
 end

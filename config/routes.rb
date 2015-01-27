@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  root 'matches#show'
-  resources :matches, only: [:show]
+  root 'static_pages#home'
+
+  get '/computer', to: 'static_pages#computer'
+  resources :users, only: [:show, :index] #for user stats and leaderboard
+  resources :hashtags, only: [:index] #for hashtag leaderboard
 end
