@@ -12,7 +12,14 @@
 				<li class="user_leaderboard"><a href="/">User Leaderboard</a></li>
 				<li class="hashtag_leaderboard"><a href="/">Hashtag Leaderboard</a></li>
 				<li class="your_stats"><a href="/">Your Stats</a></li>
-				<li class="logout"><a href=" /users/sign_out">Logout</a></li>
+				<li class="user_nav">
+					<% if current_user %>
+						<%= link_to "Sign Out", signout_path %>
+					<%else%>
+						<%= link_to "Sign in With Twitter", "/auth/twitter" %>
+					<% end %>
+				</li>
+
 			</ul>
 		</div>
 
