@@ -21,4 +21,3 @@ TwitterBURST is a head-to-head hashtag competition in which each user enters a h
 http://www.gliffy.com/go/publish/image/7057691/M.png
 
 
-<script src="http://www.gliffy.com/diagramEmbed.js" type="text/javascript"> </script><script type="text/javascript"> gliffy_did = "7057691"; embedGliffy(); </script>
