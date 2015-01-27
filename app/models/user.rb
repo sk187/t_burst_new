@@ -8,10 +8,10 @@ class User < ActiveRecord::Base
 	has_many :hashtags, through: :matches
 
 	#validations
+	validates_uniqueness_of :name
 	validates_presence_of :name 
 	validates_presence_of :uid
 	validates_presence_of :provider
 	validates_presence_of :oauth_callback_confirmed
-	validates_uniqueness_of :name
 
 end

@@ -9,12 +9,13 @@ describe User do
 	end
 
 	#associations
-	it { should have_and_belong_to_many(:hashtags)} 
-	it { should have_many(:matches)}
+	#it { should have_many(:hashtags)} 
 
 	#validations
 	it { should validate_presence_of(:name)}
 	it { should validate_presence_of(:uid)}
 	it { should validate_presence_of(:provider)}
+	it { should validate_presence_of(:oauth_callback_confirmed)}
+	it { should validate_uniqueness_of(:name)}
 
 end

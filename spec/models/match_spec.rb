@@ -9,22 +9,25 @@ describe Match do
 	end
 
 	#associations
-	it { should have_and_belong_to_many(:hashtags)}
-	it { should have_and_belong_to_many(:users)}
+	#it { should belong_to(:hashtags)}
+	#it { should have_many(:users)}
 
 	#validations
-	it { should validate_presence_of(:created_at)}
+	it { should validate_numericality_of(:winning_hashtag_score)}
+	it { should validate_numericality_of(:losing_hashtag_score)}
+	it { should validate_numericality_of(:tie_score)}
 
-	it { should have_db_column(:winning_player)}
-	it { should have_db_column(:losing_player)}
-	it { should have_db_column(:winning_hashtag)}
-	it { should have_db_column(:losing_hashtag)}
+	#db
+	it { should have_db_column(:winning_player_id)}
+	it { should have_db_column(:losing_player_id)}
+	it { should have_db_column(:winning_hashtag_id)}
+	it { should have_db_column(:losing_hashtag_id)}
 	it { should have_db_column(:winning_hashtag_score)}
 	it { should have_db_column(:losing_hashtag_score)}
-	it { should have_db_column(:tie_player_one)}
-	it { should have_db_column(:tie_player_two)}
-	it { should have_db_column(:tie_hashtag_one)}
-	it { should have_db_column(:tie_hashtag_two)}
+	it { should have_db_column(:tie_player_one_id)}
+	it { should have_db_column(:tie_player_two_id)}
+	it { should have_db_column(:tie_hashtag_one_id)}
+	it { should have_db_column(:tie_hashtag_two_id)}
 	it { should have_db_column(:tie_score)}
 
 
