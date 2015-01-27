@@ -15,42 +15,27 @@
 //= require turbolinks
 //= require_tree .
 
+var object = {
+	hashtag_one_body : "#hello",
+	hashtag_two_body : "#goodbye"
+};
+
+// options for object:
+// winning_player_id
+// losing_player_id
+// winning_hashtag_score
+// losing_hashtag_score
+// tie_player_one_id
+// tie_player_two_id
+// tie_score
+// hashtag_one_body
+// hashtag_two_body
+
+$.ajax({
+	url: '/matches',
+	data: {match: object},
+	dataType: 'json',
+	type: 'POST'
+});
 
 
-// reset event listener
-document.getElementById("reset").addEventListener('click', resetTimer);
-// start event listener
-document.getElementById("start").addEventListener('click', startTimer);
-// pause event listener
-document.getElementById("pause").addEventListener('click', pauseTimer);
-
-var timer = document.getElementById("timer");
-var interval;
-var p = 0;
-var seconds = 0;
-
-function startTimer(){
-	p = 0	
-	interval = setInterval(counter, 1000);
-}
-
-function counter(){
-	if ( p === 0 ){
-		seconds ++;
-		timer.innerHTML = "Time elapsed: " + seconds;
-	}
-}
-
-function resetTimer(){
-	clearInterval(interval);
-	timer.innerHTML = "Stop Watch";
-}
-
-function pauseTimer(){
-	p = 1;
-	clearInterval(interval);
-}
-
-
- $.ajax({
-    type: "POST",
