@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 	has_many :tie_matches_two, class_name: "Match", foreign_key: 'tie_player_two_id'
 	has_many :hashtags, through: :matches
 
+	has_one :leaderboard
+
 	#validations
 	validates_uniqueness_of :name
 	validates_presence_of :name 
