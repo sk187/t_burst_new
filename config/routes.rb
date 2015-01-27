@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
-  get 'layouts/index'
-  get 'welcome/index'
+  root 'matches#show'
+  resources :matches, only: [:show]
 end
