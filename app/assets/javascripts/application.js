@@ -13,44 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .
-
-
-
-// reset event listener
-document.getElementById("reset").addEventListener('click', resetTimer);
-// start event listener
-document.getElementById("start").addEventListener('click', startTimer);
-// pause event listener
-document.getElementById("pause").addEventListener('click', pauseTimer);
-
-var timer = document.getElementById("timer");
-var interval;
-var p = 0;
-var seconds = 0;
-
-function startTimer(){
-	p = 0	
-	interval = setInterval(counter, 1000);
-}
-
-function counter(){
-	if ( p === 0 ){
-		seconds ++;
-		timer.innerHTML = "Time elapsed: " + seconds;
-	}
-}
-
-function resetTimer(){
-	clearInterval(interval);
-	timer.innerHTML = "Stop Watch";
-}
-
-function pauseTimer(){
-	p = 1;
-	clearInterval(interval);
-}
-
-
- $.ajax({
-    type: "POST",

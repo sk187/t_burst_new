@@ -13,7 +13,10 @@
  *= require_tree .
  *= require_self
  */
-
+.container {
+    width: 100%
+    position: absolute;
+}
 
  body {
  	text-align: center;
@@ -36,19 +39,19 @@
  	background-color: yellow;
  }
 
-#circle {
+.circle-set {
+    margin: auto;
+    height: 250px;
+    display: block;
+}
+.circle {
     background: #f00;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    margin: 50px;
+    margin: 20px;
     display: inline-block;
 }
-
-.circle-set {
-	padding-right: 180px;
-}
-
 
 .clear {
     overflow: auto;
@@ -83,7 +86,9 @@ button {
 	padding: 3em;
 }
 
-
+.hash-tag {
+    padding-top: 4.5em;
+}
 
 
 
