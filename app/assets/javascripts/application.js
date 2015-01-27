@@ -15,11 +15,36 @@
 //= require turbolinks
 //= require_tree .
 
+var object = {
+	hashtag_one_body : "#hello",
+	hashtag_two_body : "#goodbye"
+};
+
+// options for object:
+// winning_player_id
+// losing_player_id
+// winning_hashtag_score
+// losing_hashtag_score
+// tie_player_one_id
+// tie_player_two_id
+// tie_score
+// hashtag_one_body
+// hashtag_two_body
+
+$.ajax({
+	url: '/matches',
+	data: {match: object},
+	dataType: 'json',
+	type: 'POST'
+});
+
+
+<<<<<<< HEAD
 
 
 
 
 
 
-
-
+=======
+>>>>>>> d7a15bb5abe0cb455555a6900d1aeaf2a31ea402

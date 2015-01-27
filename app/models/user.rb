@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 	has_many :tie_matches_two, class_name: "Match", foreign_key: 'tie_player_two_id'
 	has_many :hashtags, through: :matches
 
+	has_one :leaderboard
+
 	#validations
 	validates_uniqueness_of :name
 	validates_presence_of :name 
@@ -14,11 +16,14 @@ class User < ActiveRecord::Base
 	validates_presence_of :provider
 
 	def self.create_with_omniauth(auth)
-		create! do |user|
-			user.provider = auth["provider"]
-			user.uid = auth["uid"]
-			user.name = auth["info"]["name"]
-		end
+		user = User.new
+		user.provider = auth["provider"]
+		user.uid = auth["uid"]
+		user.name = auth["info"]["name"]
+		user.save
+		Leaderboard.create(user_id: user.id, win_count: 0)
 	end
+
+
 end
 
