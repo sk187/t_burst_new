@@ -20,6 +20,7 @@ class User < ActiveRecord::Base
 			user.provider = auth["provider"]
 			user.uid = auth["uid"]
 			user.name = auth["info"]["name"]
+			Leaderboard.create(user_id: user.id, win_count: 0)
 		end
 	end
 end
