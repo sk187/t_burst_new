@@ -1,5 +1,11 @@
 class UsersController < ApplicationController
 
+  def create
+
+
+  end
+
+
   def show #AJAX URL: "/users/[@current_user.id].json"
     # @user = {
     #   name: current_user.name,

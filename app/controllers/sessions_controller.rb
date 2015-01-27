@@ -7,8 +7,6 @@ class SessionsController < ApplicationController
 		session[:user_id] = user.id
 		flash[:notice] = "Signed In!"
 
-		#binding.pry
-
 		redirect_to root_url
 	end
 

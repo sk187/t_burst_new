@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
 
-
 	#associations
 	has_many :won_matches, class_name: "Match", foreign_key: 'winning_player_id'
 	has_many :lost_matches, class_name: "Match", foreign_key: 'losing_player_id'
@@ -13,9 +12,6 @@ class User < ActiveRecord::Base
 	validates_presence_of :name 
 	validates_presence_of :uid
 	validates_presence_of :provider
-	validates_presence_of :oauth_callback_confirmed
-
-
 
 	def self.create_with_omniauth(auth)
 		create! do |user|
