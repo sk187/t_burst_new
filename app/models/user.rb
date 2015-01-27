@@ -12,5 +12,6 @@ class User < ActiveRecord::Base
 	validates_presence_of :uid
 	validates_presence_of :provider
 	validates_presence_of :oauth_callback_confirmed
+	validates_uniqueness_of :name
 
 end

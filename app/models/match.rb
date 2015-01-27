@@ -11,5 +11,8 @@ class Match < ActiveRecord::Base
 	belongs_to :tie_hashtag_two, class_name: "Hashtag"
 
 	#validations
+	validates_numericality_of :winning_hashtag_score, allow_nil: :true
+	validates_numericality_of :losing_hashtag_score, allow_nil: :true
+	validates_numericality_of :tie_score, allow_nil: :true
 
 end
