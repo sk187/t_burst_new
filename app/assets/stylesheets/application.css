@@ -32,6 +32,10 @@
  	font-size: 80px;
  }
 
+ h2 {
+ 	font-family: "Avenir";
+ }
+
  .banner {
  	background-color: yellow;
  }
@@ -64,6 +68,8 @@
 
 button {
     text-transform: uppercase;
+    width: 150px;
+    height: 150px;
     background: #00FF00;
     padding: 1em;
     font-size: 1.2em;
@@ -82,6 +88,40 @@ button {
 .startbutton {
 	padding: 3em;
 }
+
+
+
+
+
+
+/*@import url(http://fonts.googleapis.com/css?family=Josefin+Slab);*/
+
+/*.controls {
+  margin: 50px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 72px;
+  text-align: center;
+}
+
+button {
+  background: #4479BA;
+  color: #FFF;
+  font-family: Josefin Slab;
+  font-size: 50px;
+  text-align: center;
+  border: 1px solid black;
+  margin: 20px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 2px 2px black;
+}
+
+button:hover{
+    background: #356094;
+}*/
 
 
 
