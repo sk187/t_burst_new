@@ -18,6 +18,6 @@ TwitterBURST is a head-to-head hashtag competition in which each user enters a h
 
 <h4>Wireframes</h4>
 
-http://www.gliffy.com/go/publish/image/7057691/M.png
+http://www.gliffy.com/go/publish/7057691
 
 
