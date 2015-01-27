@@ -23,6 +23,8 @@ describe Match do
 	it { should have_db_column(:losing_hashtag_score)}
 	it { should have_db_column(:tie_player_one)}
 	it { should have_db_column(:tie_player_two)}
+	it { should have_db_column(:tie_hashtag_one)}
+	it { should have_db_column(:tie_hashtag_two)}
 	it { should have_db_column(:tie_score)}
 
 

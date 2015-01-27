@@ -13,6 +13,8 @@ describe User do
 	it { should have_many(:matches)}
 
 	#validations
-	it { should validate_presence_of(:twitter_username)}
+	it { should validate_presence_of(:name)}
+	it { should validate_presence_of(:uid)}
+	it { should validate_presence_of(:provider)}
 
 end
