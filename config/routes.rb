@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/computer', to: 'static_pages#computer'
   resources :users, only: [:index] #for user stats
   resources :leaderboards, only: [:index]#for leaderboard
+  resources :matches
 
   resources :application, only: [:create]
 
