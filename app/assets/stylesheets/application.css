@@ -18,10 +18,22 @@
  body {
  	text-align: center;
  	width: 100%;
- 	font-family: "Verdana";
  	margin: 0;
  	padding: 0;
- 	background: #D8D8D8;
+ 	background: #CCFFFF;
+ }
+
+ h1 {
+ 	/*font-family: 'Bangers', cursive;*/
+ 	font-family: 'Montserrat Subrayada', sans-serif;
+ 	/*font-family: 'Russo One', sans-serif;
+ 	/*font-family: 'Monoton', cursive;*/
+ 	/*font-family: 'Archivo Black', sans-serif;*/
+ 	font-size: 80px;
+ }
+
+ .banner {
+ 	background-color: yellow;
  }
 
 #circle {
@@ -29,7 +41,7 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    margin: 90px;
+    margin: 50px;
     display: inline-block;
 }
 
@@ -46,23 +58,25 @@
  .nav {
  	float: left;
  	text-align: left;
+ 	font-family: "Avenir";
  }
 
 
 button {
     text-transform: uppercase;
-    background: gray;
+    background: #00FF00;
     padding: 1em;
     font-size: 1.2em;
+    font-family: "Avenir";
 }
 
 
 .ticker1 {
-	background: yellow;
+	background: #D1D0CE;
 }
 
 .ticker2 {
-	background: yellow;
+	background: #D1D0CE;
 }
 
 .startbutton {
