@@ -3,13 +3,13 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   get '/computer', to: 'static_pages#computer'
-  resources :users, only: [:show, :index] #for user stats and leaderboard
-  resources :hashtags, only: [:index] #for hashtag leaderboard
+  resources :users, only: [:show] #for user stats
+  resources :leaderboards, only: [:index]#for leaderboard
 
   resources :application, only: [:create]
 
-  match "auth/:provider/callback" => "sessions#create" , via: [:get, :post]
-  match "/signout" => "sessions#destroy", via: [:get, :post], :as => "signout"
-
+  get '/signout', to: 'sessions#destroy', :as => "signout"
+  get 'auth/:provider/callback', to: 'sessions#create'
+  
 
 end

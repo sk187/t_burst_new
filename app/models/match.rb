@@ -15,4 +15,5 @@ class Match < ActiveRecord::Base
 	validates_numericality_of :losing_hashtag_score, allow_nil: :true
 	validates_numericality_of :tie_score, allow_nil: :true
 
+
 end
