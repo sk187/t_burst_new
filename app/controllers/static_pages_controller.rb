@@ -5,7 +5,9 @@ class StaticPagesController < ApplicationController
   end
 
   def computer
-  	@computer_choice = "hello"
+  	# array = []
+  	# @computer_choice = array.sample
+  	# @computer_choice = "#hello"
 
   	respond_to do |format|
   		format.json { render json: @computer_choice }
