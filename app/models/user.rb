@@ -16,12 +16,14 @@ class User < ActiveRecord::Base
 	validates_presence_of :provider
 
 	def self.create_with_omniauth(auth)
-		create! do |user|
-			user.provider = auth["provider"]
-			user.uid = auth["uid"]
-			user.name = auth["info"]["name"]
-			Leaderboard.create(user_id: user.id, win_count: 0)
-		end
+		user = User.new
+		user.provider = auth["provider"]
+		user.uid = auth["uid"]
+		user.name = auth["info"]["name"]
+		user.save
+		Leaderboard.create(user_id: user.id, win_count: 0)
 	end
+
+
 end
 
