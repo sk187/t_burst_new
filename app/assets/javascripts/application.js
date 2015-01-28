@@ -15,36 +15,21 @@
 //= require turbolinks
 //= require_tree .
 
-var object = {
-	hashtag_one_body : "#hello",
-	hashtag_two_body : "#goodbye"
-};
-
-// options for object:
-// winning_player_id
-// losing_player_id
-// winning_hashtag_score
-// losing_hashtag_score
-// tie_player_one_id
-// tie_player_two_id
-// tie_score
-// hashtag_one_body
-// hashtag_two_body
-
-$.ajax({
-	url: '/matches',
-	data: {match: object},
-	dataType: 'json',
-	type: 'POST'
+$('#element').click(function(){
+	var matchData = {
+		hashtag_one_body : null,
+		hashtag_two_body : null,
+		winning_player : null,
+		losing_player : null,
+		winning_hashtag_score : null,
+		losing_hashtag_score : null,
+		tie_player_one : null,
+		tie_score : null
+	};
+	$.ajax({
+		url: '/matches',
+		data: {match: matchData},
+		dataType: 'json',
+		type: 'POST'
+	});
 });
-
-
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
->>>>>>> d7a15bb5abe0cb455555a6900d1aeaf2a31ea402

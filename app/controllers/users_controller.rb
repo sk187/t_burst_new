@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-  helper_method :current_user
-
 
   def create
 
@@ -8,24 +6,21 @@ class UsersController < ApplicationController
   end
 
 
-  def index #AJAX URL: "/users/[@current_user.id].json"
+  def index 
      @user ||= User.find(session[:user_id]) if session[:user_id]
-    #   name: current_user.name,
-    #   wins: current_user.won_matches.length,
-    #   losses: current_user.lost_matches.length,
-    #   ties: (current_user.tie_matches_one.length + current_user.tie_matches_two.length)
-    # }
+     @name = @user.name
+     @wins = @user.won_matches.length
+     @losses = @user.lost_matches.length
+     @ties = (@user.tie_matches_one.length + @user.tie_matches_two.length)
+
+     @user_stats = {name: @name, wins: @wins, losses: @losses, ties: @ties}
+     #created the user's stats object in Json
+
+
 
     respond_to do |format|
-      format.json { render json: @user }
+      format.json { render json: @user_stats }
     end
   end
-
-private
-
-  def current_user 
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
-      #binding.pry
-  end 
 
 end
