@@ -49,6 +49,24 @@ $("#startbutton").click(function(){
 var timer = document.getElementById("timer");
 var interval;
 var p = 0;
-var seconds = 4;
+var seconds = 31;
+
+
+
+
+
+var btn = document.querySelector('button');
+btn.addEventListener('click', newGame);
+
+function newGame(){
+  var i = 3;
+  var gameLoop = setInterval(function(){
+    btn.innerHTML = i--; 
+    if( i == -2 ){
+      clearInterval( gameLoop );
+      btn.innerHTML = "New Game";
+    }
+  }, 1000); 
+}
 
 
