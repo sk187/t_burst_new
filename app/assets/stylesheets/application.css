@@ -42,9 +42,10 @@
 
 .circle-set {
     margin: auto;
-    height: 250px;
+    height: 400px;
     display: block;
 }
+
 .circle {
     background: #f00;
     width: 200px;
@@ -102,7 +103,15 @@ a {
   text-decoration: none;
 }
 
+#profile-pic{
+  border-radius: 3em;
+  display: inline-block;
+}
 
+.welcome-bar{
+  display: inline-block;
+  text-align: center;
+}
 
 
 
