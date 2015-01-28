@@ -28,11 +28,7 @@
  }
 
  h1 {
-  /*font-family: 'Bangers', cursive;*/
   font-family: 'Montserrat Subrayada', sans-serif;
-  /*font-family: 'Russo One', sans-serif;
-  /*font-family: 'Monoton', cursive;*/
-  /*font-family: 'Archivo Black', sans-serif;*/
   font-size: 80px;
  }
 
@@ -97,9 +93,16 @@ button {
     padding-top: 4.5em;
 }
 
-.hash-tag {
-    padding-top: 4.5em;
+li {
+  list-style: none;
 }
+
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+
 
 
 
