@@ -3,43 +3,18 @@
 <head>
   <title>TwitterBURST!</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <%= javascript_include_tag 'computer'%>
-
   <%= csrf_meta_tags %>
-  <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Archivo+Black' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Montserrat+Subrayada:700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat+Subrayada:700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
-<!-- Sign in Notice -->
-	<% if flash[:notice] %>
-		<div class="notice">
-			<%= flash[:notice] %>
-		</div>	
-	<% end %>
-
-	<% if current_user %>
-Welcome, <%= current_user.name %>! 
-<img id="profile-pic" src="<%= current_user.pic%>"/>
-	<% end %>
 
 <%= yield %>
 
 
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
-
-
-
 <%= javascript_include_tag 'rebecca' %>
-
-
+<%= javascript_include_tag 'computer'%>
 
 </body>
 </html>
