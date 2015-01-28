@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 		user = User.find_by(provider: auth["provider"], uid: auth["uid"]) || User.create_with_omniauth(auth)
 		session[:user_id] = user.id
 		flash[:notice] = "Signed In!"
-
+		# binding.pry
 		redirect_to root_url
 	end
 
