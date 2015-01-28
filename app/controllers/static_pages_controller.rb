@@ -6,8 +6,11 @@ class StaticPagesController < ApplicationController
      @wins = @user.won_matches.length
      @losses = @user.lost_matches.length
      @ties = (@user.tie_matches_one.length + @user.tie_matches_two.length)
-
-
+     @leaders = Leaderboard.order(win_count: :desc).limit(10)
+     @leaders.each do |leader|
+      leader.user.name
+      leader.win_count
+    end
   end
 
   def computer

@@ -30,6 +30,7 @@
  h1 {
   font-family: 'Montserrat Subrayada', sans-serif;
   font-size: 80px;
+  padding-bottom: 20px;
  }
 
  h2 {
@@ -38,6 +39,9 @@
 
  .banner {
   background-color: yellow;
+  padding-top: 1px;
+  display: inline-block;
+  clear: fix;
  }
 
 .circle-set {
@@ -122,7 +126,47 @@ table, td{
   border: 1px solid black;
 }
 
+#leaderboard{
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
 
+#stats{
+  position: absolute;
+  top: 40%;
+  left: 75%;
+}
+
+#bird {
+  height: 100px;
+  width: 200px;
+  margin-left: 20px;
+  margin-top: 20px;
+  display: inline-block;
+  float: left;
+}
+
+#bird img {
+  height: 100%;
+  width: auto;
+}
+
+#bird2 {
+  height: 100px;
+  width: 200px;
+  margin-left: 20px;
+  margin-top: 20px;
+  display: inline-block;
+  float: right;
+}
+
+#bird2 img {
+  height: 100%;
+  width: auto;
+  transform: scaleX(-1);
+  filter: "FlipH";
+}
 /*@import url(http://fonts.googleapis.com/css?family=Josefin+Slab);*/
 
 /*.controls {
