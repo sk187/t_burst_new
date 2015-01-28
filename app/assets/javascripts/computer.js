@@ -1,5 +1,5 @@
 function setRandomHashTag(){
-	var url = window.location.origin + "/computer.json";
+	var url = "/computer.json";
 	console.log(url);
 	
 	$.ajax({
@@ -7,6 +7,8 @@ function setRandomHashTag(){
 		url: url,
 		dataType: "json",
 		success: function(hashTag){
+			$("#hash1").empty();
+			$("#hash2").empty();
 			renderHashTag(hashTag);
 		}, 
 		error: function(){

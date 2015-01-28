@@ -1,54 +1,35 @@
-$("#startbutton").click(function(){
-	// event.preventDefault();
-	alert("This is working");
-	var p = 0	
-	var interval = setInterval(counter, 1000);
-
-	function counter(){
-	if ( p === 0 ){
-		seconds --;
-		timer.innerHTML = ":" + seconds;
-	}
- 	if (seconds <= -1) {
-      clearInterval(interval);
-      	timer.innerHTML = "New Game";
-      	$("#startbutton").click(function(){
-      		alert("This is where the game should reset");
-      		timer.innerHTML = "Start";
-      		 clearInterval(interval);
-      		    function resetInterval() {
- 
-        } 
-
-      	});
-    }
-}
-
-});
-
-
-// var btn = document.querySelector('button');
-// btn.addEventListener('click', newGame);
-
-// function newGame(){
-//   var i = 3;
-//   var gameLoop = setInterval(function(){
-//     btn.innerHTML = i--; 
-//     if( i == -2 ){
-//       clearInterval( gameLoop );
-//       btn.innerHTML = "New Game";
-//     }
-//   }, 1000); 
-// }
-
-
-
-
-
-
-var timer = document.getElementById("timer");
+var timer = $("#start-button");
 var interval;
 var p = 0;
-var seconds = 4;
+var seconds = 10;
 
 
+   
+    
+
+$("#start-button").unbind("click").on("click", function(){
+  p = 0;
+	console.log("Hello");
+	interval = setInterval(counter, 1000);
+  });
+
+function counter(){
+  if (p == 0){
+    seconds --;
+    $("#start-button").text("00:" + seconds);
+  }
+  if (seconds == -1) {
+      p = 1;
+      clearInterval(interval);
+        $("#start-button").text ("New Game");
+        $("#start-button").on("click", reset())
+    }
+  };
+  
+
+function reset(){
+  console.log("This is where the game should reset");
+  clearInterval(interval);
+  timer.text ("Start");
+  seconds = 10;
+}

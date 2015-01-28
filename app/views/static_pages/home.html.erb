@@ -2,8 +2,21 @@
 <h1>TwitterBURST!</h1>
 </div>
 
-<div class="container">
 
+<!-- Sign in Notice -->
+		<% if flash[:notice] %>
+			<div class="notice">
+				<%= flash[:notice] %>
+			</div>	
+		<% end %>
+
+		<% if current_user %>
+	Welcome, <%= current_user.name %>! 
+	<img id="profile-pic" src="<%= current_user.pic%>"/>
+		<% end %>
+
+
+<div class="container">
 	<div class="nav">
 		<ul>
 			<li class="user_leaderboard"><a href="/">User Leaderboard</a></li>
@@ -16,39 +29,29 @@
 					<%= link_to image_tag("https://g.twimg.com/dev/sites/default/files/images_documentation/sign-in-with-twitter-gray.png"), "/auth/twitter" %>
 				<% end %>
 			</li>
-
 		</ul>
 	</div>
-
-
 	<div class="circle-set clear">
-
 		<div class="circle" id="circle1" name="user1">
 			<p class="hash-tag" id="hash1">
 			</p>
 		</div>
 
-	
-		<div class="circle" id="circle2" name="user2">			<p class="hash-tag" id="hash2">
+		<div class="circle" id="circle2" name="user2">
+			<p class="hash-tag" id="hash2">
 			</p>
 		</div>
 
-	</div>
-
-		
 		<section class="buttons" id="start">
 			<div class="buttons">
-				
-				<button class="ticker1" name="ticker1"> <a href="#">Ticker 1</a></button>
-
-				 <button id="startbutton" name="startbutton"><h2 id="timer">Start!</h2></button>
-
-				<button class="ticker2" name="ticker2"> <a href="#">Ticker 2</a></button>
+				<button class="ticker1"> <a href="#">Ticker 1</a></button>
+				<button id="start-button">Start!</button>
+				<button class="ticker2"> <a href="#">Ticker 2</a></button>
 			</div>
+		</section>
+	</div>
+</div>
 
 
-
-
-  
 
 
