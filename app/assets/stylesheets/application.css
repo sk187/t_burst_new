@@ -97,7 +97,15 @@ button {
     padding-top: 4.5em;
 }
 
+li {
+  list-style: none;
+}
 
+a {
+  list-style: none;
+  text-decoration: none;
+
+}
 
 
 
