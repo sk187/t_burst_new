@@ -26,6 +26,7 @@
 
 	<% if current_user %>
 Welcome, <%= current_user.name %>! 
+<img id="profile-pic" src="<%= current_user.pic%>"/>
 	<% end %>
 
 <%= yield %>
@@ -36,6 +37,8 @@ Welcome, <%= current_user.name %>!
 
 
 <%= javascript_include_tag 'rebecca' %>
+
+
 
 </body>
 </html>
