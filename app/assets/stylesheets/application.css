@@ -28,11 +28,7 @@
  }
 
  h1 {
-  /*font-family: 'Bangers', cursive;*/
   font-family: 'Montserrat Subrayada', sans-serif;
-  /*font-family: 'Russo One', sans-serif;
-  /*font-family: 'Monoton', cursive;*/
-  /*font-family: 'Archivo Black', sans-serif;*/
   font-size: 80px;
  }
 
@@ -104,8 +100,9 @@ li {
 a {
   list-style: none;
   text-decoration: none;
-
 }
+
+
 
 
 
