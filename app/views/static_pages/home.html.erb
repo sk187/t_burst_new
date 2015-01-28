@@ -1,5 +1,9 @@
 <div class="banner">
-<h1>TwitterBURST!</h1>
+	<h1>TwitterBURST!</h1>
+</div>
+	<div id="bird"> <img> <%= image_tag 'Twitter_logo_blue.png' %> </img>
+	</div>
+<div id="bird2"> <img> <%= image_tag 'Twitter_logo_blue.png' %> </img>
 </div>
 
 <div class="notice-container">
@@ -21,10 +25,9 @@
 <div class="container">
 	<div class="nav">
 		<ul>
-			<li class="user_leaderboard"><a href="/">User Leaderboard</a></li>
-			<li class="hashtag_leaderboard"><a href="/">Hashtag Leaderboard</a></li>
-			<li class="your_stats"><a href="/">Your Stats</a></li>
-			<li class="user_nav">
+			<li id="leaderboard_link">Leaderboard</li>
+			<li id="your_stats">Your Stats</li>
+			<li id="user_nav">
 				<% if current_user %>
 					<%= link_to "Sign Out", signout_path %>
 				<%else%>
@@ -33,24 +36,65 @@
 			</li>
 		</ul>
 	</div>
+
+	<div id="leaderboard" style="display: none">
+		<table>
+		<tr><th>Name</th><th>Bursts</th></tr>
+		<tr><td><% @leaders.each do |leader| %>
+		<%= leader.user.name %></td>
+		<td><%= leader.win_count %></td></tr>
+		<% end %>
+		</table>
+
+	</div>
+	<div id="stats" style="display: none">
+		<table>
+		<tr><th>Name: </td><td><%= @user.name %></td></tr>
+		<tr><th>Wins: </td><td><%= @wins %></td></tr>
+		<tr><th>Losses: </td><td><%= @losses %></td></tr>
+		<tr><th>Ties: </td><td><%= @ties %></td></tr>
+		</table>
+	</div>
+
 	<div class="circle-set clear">
-		<div class="circle" id="circle1" name="user1">
-			<p class="hash-tag" id="hash1">
-			</p>
-		</div>
+		
+	<div class="dual-circle">
 
-		<div class="circle" id="circle2" name="user2">
-			<p class="hash-tag" id="hash2">
-			</p>
-		</div>
-
-		<section class="buttons" id="start">
-			<div class="buttons">
-				<button class="ticker1"> <a href="#">Ticker 1</a></button>
-				<button id="start-button">Start!</button>
-				<button class="ticker2"> <a href="#">Ticker 2</a></button>
+		<div class="player">
+			<div class="score" >
+				<form>
+				<input id="score1" type="text" placeholder="score">
+				<input type="submit" id="submit1">
+				</form>
 			</div>
-		</section>
+
+			<div class="circle" id="circle1" name="user1">
+				<p class="hash-tag" id="hash1">
+				</p>
+			</div>
+		</div>
+
+		<div class="player">
+			<div class="score">
+				<form>
+				<input id="score2" type="text" placeholder="score">
+				<input type="submit" id="submit2">
+				</form>
+			</div>
+
+			<div class="circle" id="circle2" name="user2">
+				<p class="hash-tag" id="hash2">
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="buttons clear" id="start">
+		<div class="buttons">
+			<button class="ticker" id="ticker1"> 0 </button>
+			<button id="start-button">Start!</button>		<button class="ticker" id="ticker2"> 0 </button>
+		</div>
+	</div>
 	</div>
 </div>
 

@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
 
   def index 
+     @users = User.all
      @user ||= User.find(session[:user_id]) if session[:user_id]
      @name = @user.name
      @wins = @user.won_matches.length
@@ -15,7 +16,6 @@ class UsersController < ApplicationController
 
      @user_stats = {name: @name, wins: @wins, losses: @losses, ties: @ties}
      #created the user's stats object in Json
-
 
 
     respond_to do |format|
