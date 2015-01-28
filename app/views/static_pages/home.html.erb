@@ -21,10 +21,9 @@
 <div class="container">
 	<div class="nav">
 		<ul>
-			<li class="user_leaderboard"><a href="/">User Leaderboard</a></li>
-			<li class="hashtag_leaderboard"><a href="/">Hashtag Leaderboard</a></li>
-			<li class="your_stats"><a href="/">Your Stats</a></li>
-			<li class="user_nav">
+			<li id="leaderboard_link">Leaderboard</li>
+			<li id="your_stats">Your Stats</li>
+			<li id="user_nav">
 				<% if current_user %>
 					<%= link_to "Sign Out", signout_path %>
 				<%else%>
@@ -33,6 +32,22 @@
 			</li>
 		</ul>
 	</div>
+
+	<div id="leaderboard" style="display: none">
+		<%= @leaderboards.inspect %>
+
+
+
+	</div>
+	<div id="stats" style="display: none">
+		<table>
+		<tr><td>Name: </td><td><%= @user.name %></td></tr>
+		<tr><td>Wins: </td><td><%= @wins %></td></tr>
+		<tr><td>Losses: </td><td><%= @losses %></td></tr>
+		<tr><td>Ties: </td><td><%= @ties %></td></tr>
+		</table>
+	</div>
+
 	<div class="circle-set clear">
 		<div class="circle" id="circle1" name="user1">
 			<p class="hash-tag" id="hash1">

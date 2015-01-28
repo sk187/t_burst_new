@@ -113,7 +113,14 @@ a {
   text-align: center;
 }
 
+table {
+  margin: 0 auto;
+  font-family: "Avenir";
+}
 
+table, td{
+  border: 1px solid black;
+}
 
 
 /*@import url(http://fonts.googleapis.com/css?family=Josefin+Slab);*/

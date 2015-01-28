@@ -2,6 +2,12 @@ class StaticPagesController < ApplicationController
   
   def home
   	#this is the main page of the app
+     @user = User.find(session[:user_id])
+     @wins = @user.won_matches.length
+     @losses = @user.lost_matches.length
+     @ties = (@user.tie_matches_one.length + @user.tie_matches_two.length)
+
+
   end
 
   def computer
