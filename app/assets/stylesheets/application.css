@@ -14,45 +14,49 @@
  *= require_self
  */
 
+.container {
+    width: 100%
+    position: absolute;
+}
 
  body {
- 	text-align: center;
- 	width: 100%;
- 	margin: 0;
- 	padding: 0;
- 	background: #CCFFFF;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #CCFFFF;
  }
 
  h1 {
- 	/*font-family: 'Bangers', cursive;*/
- 	font-family: 'Montserrat Subrayada', sans-serif;
- 	/*font-family: 'Russo One', sans-serif;
- 	/*font-family: 'Monoton', cursive;*/
- 	/*font-family: 'Archivo Black', sans-serif;*/
- 	font-size: 80px;
+  /*font-family: 'Bangers', cursive;*/
+  font-family: 'Montserrat Subrayada', sans-serif;
+  /*font-family: 'Russo One', sans-serif;
+  /*font-family: 'Monoton', cursive;*/
+  /*font-family: 'Archivo Black', sans-serif;*/
+  font-size: 80px;
  }
 
  h2 {
- 	font-family: "Avenir";
+  font-family: "Avenir";
  }
 
  .banner {
- 	background-color: yellow;
+  background-color: yellow;
  }
 
-#circle {
+.circle-set {
+    margin: auto;
+    height: 250px;
+    display: block;
+}
+.circle {
     background: #f00;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    margin: 50px;
+    margin: 20px;
     display: inline-block;
 }
-
-.circle-set {
-	padding-right: 180px;
-}
-
 
 .clear {
     overflow: auto;
@@ -60,9 +64,9 @@
 }
 
  .nav {
- 	float: left;
- 	text-align: left;
- 	font-family: "Avenir";
+  float: left;
+  text-align: left;
+  font-family: "Avenir";
  }
 
 
@@ -78,18 +82,24 @@ button {
 
 
 .ticker1 {
-	background: #D1D0CE;
+  background: #D1D0CE;
 }
 
 .ticker2 {
-	background: #D1D0CE;
+  background: #D1D0CE;
 }
 
 .startbutton {
-	padding: 3em;
+  padding: 3em;
 }
 
+.hash-tag {
+    padding-top: 4.5em;
+}
 
+.hash-tag {
+    padding-top: 4.5em;
+}
 
 
 
