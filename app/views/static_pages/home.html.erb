@@ -2,6 +2,7 @@
 
 <div class='left-container'>
 	<div class="nav">
+	<img><%=image_tag "Twitter_logo_blue.png" %></img>
 		<ul>
 		<% if current_user %>
 			<li id="leaderboard_link">Leaderboard</li>
@@ -13,6 +14,8 @@
 		</ul>
 	</div>
 </div>
+
+
 
 <div class='right-container'>
 
@@ -31,10 +34,25 @@
 			</div> 
 
 		<div id="leaderboard" style="display: none">
-			<ol id="leaders"></ol>
+			<ul id="leaders"></ul>
+				<li id="leader-one"></li>
+				<li id="leader-two"></li>
+				<li id="leader-three"></li>
+				<li id="leader-four"></li>
+				<li id="leader-five"></li>
+				<li id="leader-six"></li>
+				<li id="leader-seven"></li>
+				<li id="leader-eight"></li>
+				<li id="leader-nine"></li>
+				<li id="leader-ten"></li>
 		</div>
 		<div id="stats" style="display: none">
-			<ul id="my_stats"></ul>
+			<ul id="my_stats">
+				<li id="stats-name"></li>
+				<li id="stats-wins"></li>
+				<li id="stats-losses"></li>
+				<li id="stats-ties"></li>
+			</ul>
 		</div>
 
 		<div class='hashtags'>
