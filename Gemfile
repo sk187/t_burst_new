@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'rails_12factor'
 gem 'figaro'
 gem 'pry'
 gem 'omniauth'
