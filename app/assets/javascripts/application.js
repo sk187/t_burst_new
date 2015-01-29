@@ -31,10 +31,7 @@ $('#reset-button').click(function(){
 $('#reset-button').click(function(){
 	var playerOneScore = parseInt($('#ticker-one').text()); 
 	var playerTwoScore = parseInt($('#ticker-two').text());
-	console.log(<%=current_user%>);
-
-	
-
+	console.log('hello');
 	var matchData = {
 		hashtag_one_body : null,
 		hashtag_two_body : null,

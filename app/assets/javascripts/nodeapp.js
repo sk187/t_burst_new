@@ -1,9 +1,7 @@
 
-var first_hashtag = '';
-var second_hashtag = '';
 var numone = 0;
 var numtwo = 0;
-var query = ''
+
 
     function resetFields(){
       $('#ticker-one').text(0);
@@ -12,26 +10,30 @@ var query = ''
       $('#second-hashtag-result').text(' ');
     };
 
-$('#start-button').on('click', function(e){
-    e.preventDefault();
+$('#start-button').on('click', function(){
     resetFields();
-    first_hashtag = 'snow';
-    second_hashtag = 'hi';
-    query = 'first_hashtag='+ first_hashtag +'&second_hashtag='+ second_hashtag
+    var first_hashtag = $('#first-hashtag').val();
+    var second_hashtag = $('#hash2').text();
+    console.log(first_hashtag);
+    console.log(second_hashtag);
+
+    var query = 'first_hashtag='+ first_hashtag +'&second_hashtag='+ second_hashtag
 
     var socket = io.connect('https://twitter-burst-node.herokuapp.com/', { query: query, 'forceNew':true });
     socket.on('stream', function(tweet){
+        setTimeout(function(){
         if (tweet.search(first_hashtag) != -1){
             $('#first-hashtag-result').text(tweet);
             numone = $('#ticker-one').text();
             numone ++;
             $('#ticker-one').text(numone);
-        } else {
+        } else if (tweet.search(second_hashtag) != -1) {
             $('#second-hashtag-result').text(tweet);
             numtwo = $('#ticker-two').text();
             numtwo ++;
             $('#ticker-two').text(numtwo);
         }
+        }, 0);
     });
     setTimeout(function () {
       socket.disconnect();
