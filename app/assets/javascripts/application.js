@@ -31,9 +31,15 @@ $('#reset-button').click(function(){
 $('#reset-button').click(function(){
 	var playerOneScore = parseInt($('#ticker-one').text()); 
 	var playerTwoScore = parseInt($('#ticker-two').text());
-	console.log(<%=current_user%>);
 
-	
+	var data = $.ajax({
+		url: "/users.json",
+		type: 'GET',
+		dataType: 'json',
+		data: {get_param: 'id'}
+	});
+
+	console.log(data);
 
 	var matchData = {
 		hashtag_one_body : null,
