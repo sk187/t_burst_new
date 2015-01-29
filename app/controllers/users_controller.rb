@@ -14,7 +14,7 @@ class UsersController < ApplicationController
      @losses = @user.lost_matches.length
      @ties = (@user.tie_matches_one.length + @user.tie_matches_two.length)
 
-     @user_stats = {name: @name, wins: @wins, losses: @losses, ties: @ties}
+     @user_stats = {id: @user.id, name: @name, wins: @wins, losses: @losses, ties: @ties}
      #created the user's stats object in Json
 
 
