@@ -16,6 +16,17 @@
 //= require_tree .
 
 
+function resetFields(){
+  $('#ticker-one').text(0);
+  $('#ticker-two').text(0);
+  $('#first-hashtag-result').text(' ');
+  $('#second-hashtag-result').text(' ');
+ };
+
+$('#reset-button').click(function(){
+	resetFields();
+
+});
 
 $('#element').click(function(){
 	var matchData = {
