@@ -11,7 +11,7 @@ function setRandomHashTag(){
 			renderHashTag(hashTag);
 		}, 
 		error: function(){
-			alert('Broken');
+			console.log('Broken');
 		}
 	});
 }

@@ -29,9 +29,6 @@ $('#reset-button').click(function(){
 });
 
 $('#reset-button').click(function(){
-	var playerOneScore = parseInt($('#ticker-one').text()); 
-	var playerTwoScore = parseInt($('#ticker-two').text());
-	console.log('hello');
 	var matchData = {
 		hashtag_one_body : null,
 		hashtag_two_body : null,
@@ -42,10 +39,15 @@ $('#reset-button').click(function(){
 		tie_player_one : null,
 		tie_score : null
 	};
-	$.ajax({
-		url: '/matches',
-		data: {match: matchData},
-		dataType: 'json',
-		type: 'POST'
-	});
+	var oneScore = parseInt($('#ticker-one').text()); 
+	var twoScore = parseInt($('#ticker-two').text());
+	console.log(oneScore);
+	console.log(twoScore);
+
+	// $.ajax({
+	// 	url: '/matches',
+	// 	data: {match: matchData},
+	// 	dataType: 'json',
+	// 	type: 'POST'
+	// });
 });
