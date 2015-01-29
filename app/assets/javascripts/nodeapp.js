@@ -13,9 +13,11 @@ var query = ''
 
 $('#start-button').unbind('click').on('click', function(){
     resetFields();
-    first_hashtag = 'hi';
-    second_hashtag = 'snow';
+    first_hashtag = $('#first-hashtag').val();
+    second_hashtag = $('#hash2').text();
     query = 'first_hashtag='+ first_hashtag +'&second_hashtag='+ second_hashtag
+    console.log(first_hashtag);
+    console.log(second_hashtag);
     var socket = io.connect('https://twitter-burst-node.herokuapp.com/', { query: query, 'forceNew':true });
     socket.on('stream', function(tweet){
         console.log(tweet);

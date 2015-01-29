@@ -1,5 +1,5 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-	provider :twitter, ENV['consumer_key'], ENV['consumer_secret']	
+	provider :twitter, ENV['TWITTER_C_KEY_TWO'], ENV['TWITTER_SECRET_TWO']	
 	{
 		secure_image_url: 'true',
 		image_size: 'original',
