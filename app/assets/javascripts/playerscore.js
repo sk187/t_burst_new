@@ -10,8 +10,6 @@ circleSizer = window.setInterval(function(){
 	var size = 50
 	var ratioOne = (scoreOne/scoreTwo);
 	var ratioTwo = (scoreTwo/scoreOne);
-	console.log("Ratio One is " + ratioOne);
-	console.log("Ratio Two is " + ratioTwo);
 
 	if(ratioOne > 5){
 		$("#circle-one").css("height", function (height){
