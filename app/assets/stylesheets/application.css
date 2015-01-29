@@ -180,17 +180,17 @@ button {
   font-size: 30px;
   font-family: "Avenir";
   font-weight: bolder;
-  margin: 0 1em;
+  margin: 0;
 }
 
 #ticker-one {
   background: white;
-  font-size: 50px;
+  font-size: 30px;
 }
 
 #ticker-two {
   background: white;
-  font-size: 50px;
+  font-size: 30px;
 }
 
 a {
