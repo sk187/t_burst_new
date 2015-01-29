@@ -1,23 +1,20 @@
 circleSizer = window.setInterval(function(){
 	// Gets Value of Ticker Box 1
-  	var scoreOne = $('#ticker-one').text();
+  	var scoreOne = parseInt($('#ticker-one').text());
 	// Gets Value of Ticker Box 2 
-	var scoreTwo = $("#ticker-two").text();
-	// Turns the value to int
-	parseInt(scoreOne);
-	parseInt(scoreTwo);
+	var scoreTwo = parseInt($("#ticker-two").text());
 	// Gets the difference between the scores
 	var size = 50
 	var ratioOne = (scoreOne/scoreTwo);
 	var ratioTwo = (scoreTwo/scoreOne);
 
-	if(ratioOne > 5){
+	if(ratioOne > 3){
 		$("#circle-one").css("height", function (height){
-		return height+ 300;
+		return height+ 200;
 		});
 
 		$("#circle-one").css("width", function (width){
-		return width+ 300;
+		return width+ 200;
 		});
 
 		$("#circle-two").css("height", function (height){
@@ -29,7 +26,7 @@ circleSizer = window.setInterval(function(){
 		});
 	}
 	
-	else if (ratioTwo > 5) {
+	else if (ratioTwo > 3) {
 
 		$("#circle-one").css("height", function (height){
 		return height+ 25;
@@ -40,11 +37,11 @@ circleSizer = window.setInterval(function(){
 		});
 
 		$("#circle-two").css("height", function (height){
-		return height+ 300;
+		return height+ 200;
 		});
 
 		$("#circle-two").css("width", function (width){
-		return width+ 300;
+		return width+ 200;
 		});
 	}
 
