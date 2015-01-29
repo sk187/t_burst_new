@@ -1,5 +1,5 @@
 
-$('#leaderboard_link').unbind("click").on("click", setLeaderboard());
+$('#leaderboard_link').unbind("click").on("click", setLeaderboard);
 
 $('#leaderboard_link').unbind("click").on("click", function(){
 	$('#leaderboard').toggle('slow')
@@ -25,7 +25,7 @@ function setLeaderboard(){
 	});
 }
 
-$('#your_stats').unbind("click").on("click", setStatus());
+$('#your_stats').unbind("click").on("click", setStatus);
 
 $('#your_stats').unbind("click").on("click", function(){
 	$('#stats').toggle('slow')

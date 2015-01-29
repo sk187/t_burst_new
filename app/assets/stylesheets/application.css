@@ -13,122 +13,68 @@
  *= require_tree .
  *= require_self
  */
-.container {
-    width: 100%
-    position: absolute;
-}
 
- body {
-  text-align: center;
-  width: 100%;
+/*MAIN DIVS*/
+
+body{
   margin: 0;
   padding: 0;
-  background: #c0deed;
- }
-
- h1 {
-  /*font-family: 'Bangers', cursive;*/
-  font-family: 'Montserrat Subrayada', sans-serif;
-  /*font-family: 'Russo One', sans-serif;
-  /*font-family: 'Monoton', cursive;*/
-  /*font-family: 'Archivo Black', sans-serif;*/
-  font-size: 80px;
-  color: #0084b4;
-  padding-bottom: 20px;
- }
-
- h2 {
-  font-family: "Avenir";
- }
-
- .banner {
-  padding-top: 1px;
-  display: inline-block;
-  clear: fix;
- }
-
-.circle-set {
-    margin: auto;
-    height: 500px;
-    display: block;
-}
-.circle {
-    background: #f00;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 20px;
-    display: inline-block;
+  background: #565051;
+  min-width: 500px
 }
 
-
-.clear {
-    overflow: auto;
-    clear: both;
-}
-
- .nav {
+.left-container{
   float: left;
-  text-align: left;
+  width: 17%;
+  min-width: 100px;
+}
+
+.right-container{
+  float: left;
+  width: 83%;
+  min-width: 400px;
+}
+
+.footer{
+  clear: both;
+  width: 100%;
+  background-color: #c0deed;
+  height: 100px;
+}
+
+/*NAVIGATION*/
+
+.nav{
+  background-color: #565051;
+  text-align: center;
   font-family: "Avenir";
   font-size: 18px;
-  text-align:center;
-  padding:1em;
-  border-right:1px solid #fff;
- }
-
-
-button {
-    text-transform: uppercase;
-    width: 150px;
-    height: 150px;
-    background: #00FF00;
-    padding: 1em;
-    font-size: 1.2em;
-    font-family: "Avenir";
+  padding-top: 10em;
+  padding-right: 20px;
 }
 
-
-.ticker1 {
-  background: #00aced;
+.nav ul{
+  list-style-type: none;
 }
 
-.ticker2 {
-  background: #00aced;
+/*HEADER*/
+
+.banner{
+  margin: 0;
+  background-color: #c0deed;
 }
 
-.startbutton {
-  padding: 3em;
+.banner h1{
+  margin: 0;
+  text-align: center;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  font-size: 85px;
+  color: #184E83;
+  padding-bottom: 20px;
 }
 
-.hash-tag {
-    padding-top: 4.5em;
-}
-
-table {
-  margin: 0 auto;
-  font-family: "Avenir";
-}
-
-table, th, td {
-  border: 1px solid black;
-}
-
-th {
-  background-color: #00aced;
-}
-
-td {
-  background-color: #ffffff;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  list-style: none;
-  text-decoration: none;
+.notice-banner{
+  background-color: blue;
 }
 
 #profile-pic{
@@ -141,6 +87,114 @@ a {
   text-align: center;
 }
 
+/*HASHTAG DISPLAY*/
+
+.hashtags{
+  /*height: 100px;*/
+  background-color: #c0deed;
+  text-align: center;
+}
+
+.hashtags h3{
+  display: inline-block;
+  padding: 0px 70px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/*.hashtags #first-hashtag {
+  padding-left: 50px;
+  padding-left: 150px;
+}*/
+
+#first-hashtag {
+  height: 25px;
+  width: 175px;
+}
+/*CIRCLES*/
+
+.circle-set{
+  background-color: #c0deed;
+  text-align: center;
+  min-height: 300px;
+}
+
+.circle {
+  background: #f00;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 75px;
+}
+
+/*TWEETS*/
+
+.tweet-bodies{
+  background: #c0deed;
+  height: 110px;
+  text-align: center
+}
+
+.tweet-one{
+  background-color: #c0deed;
+  height: 115px;
+  width: 50%;
+  float: left;
+}
+
+.tweet-two{
+  background-color: #c0deed;
+  height: 115px;
+  width: 50%;
+  float: left;
+}
+
+.tweet-bodies h3{
+  padding: 0px 25px;
+}
+
+
+/*COUNTERS and BUTTONS*/
+
+.button-set{
+  background-color: #c0deed;
+  text-align: center;
+  padding: 2em 0;
+}
+
+
+h3 {
+ margin: 0;
+ font-family: "Avenir";
+}
+
+button {
+  text-transform: uppercase;
+  width: 150px;
+  height: 150px;
+  background: #184E83;
+  font-size: 30px;
+  font-family: "Avenir";
+  font-weight: bolder;
+  margin: 0 1em;
+}
+
+#ticker-one {
+  background: white;
+  font-size: 50px;
+}
+
+#ticker-two {
+  background: white;
+  font-size: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*
 
 #leaderboard{
   position: absolute;
@@ -152,72 +206,5 @@ a {
   position: absolute;
   top: 50%;
   left: 75%;
-}
-
-#bird {
-  height: 100px;
-  width: 200px;
-  margin-left: 20px;
-  margin-top: 30px;
-  top: 10%;
-  display: inline-block;
-  float: left;
-}
-
-#bird img {
-  height: 100%;
-  width: auto;
-}
-
-#bird2 {
-  height: 100px;
-  width: 200px;
-  margin-right: 20px;
-  margin-top: 30px;
-  display: inline-block;
-  float: right;
-}
-
-#bird2 img {
-  height: 100%;
-  width: auto;
-  transform: scaleX(-1);
-  filter: "FlipH";
-}
-/*@import url(http://fonts.googleapis.com/css?family=Josefin+Slab);*/
-
-/*.controls {
-  margin: 50px;
-  text-align: center;
-}
-
-h1 {
-  font-size: 72px;
-  text-align: center;
-}
-
-button {
-  background: #4479BA;
-  color: #FFF;
-  font-family: Josefin Slab;
-  font-size: 50px;
-  text-align: center;
-  border: 1px solid black;
-  margin: 20px;
-  padding: 15px 25px;
-  border-radius: 10px;
-  box-shadow: 2px 2px black;
-}
-
-button:hover{
-    background: #356094;
 }*/
-
-
-
-
-
-
-
-
 

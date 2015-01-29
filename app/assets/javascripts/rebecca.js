@@ -1,7 +1,7 @@
 var timer = $("#start-button");
 var interval;
 var p = 0;
-var seconds = 10;
+var seconds = 30;
 
 
    

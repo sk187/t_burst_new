@@ -1,95 +1,70 @@
-<div class="banner">
-	<h1>TwitterBURST!</h1>
-</div>
-	<div id="bird"> <img> <%= image_tag 'Twitter_logo_blue.png' %> </img>
-	</div>
-<div id="bird2"> <img> <%= image_tag 'Twitter_logo_blue.png' %> </img>
-</div>
+<div class="main-container">
 
-<div class="notice-container">
-	<% if flash[:notice] %>
-		<div class="notice">
-			<%= flash[:notice] %>
-		</div>	
-	<% end %>
-
-	<% if current_user %>
-		<div class="welcome-bar"> 
-			Welcome, <%= current_user.name %>! 
-		<img id="profile-pic" src="<%= current_user.pic%>"/>
-	<% end %>
-	</div> 
-</div>
-
-
-<div class="container">
+<div class='left-container'>
 	<div class="nav">
 		<ul>
+		<% if current_user %>
 			<li id="leaderboard_link">Leaderboard</li>
 			<li id="your_stats">Your Stats</li>
-			<li id="user_nav">
-				<% if current_user %>
-					<%= link_to "Sign Out", signout_path %>
-				<%else%>
-					<%= link_to image_tag("https://g.twimg.com/dev/sites/default/files/images_documentation/sign-in-with-twitter-gray.png"), "/auth/twitter" %>
-				<% end %>
-			</li>
+			<li id="user_nav"><%= link_to "Sign Out", signout_path %></li>
+		<%else%>
+		<li><%= link_to image_tag("https://g.twimg.com/dev/sites/default/files/images_documentation/sign-in-with-twitter-gray.png"), "/auth/twitter" %></li>
+		<% end %>
 		</ul>
-	</div>
-
-	<div id="leaderboard" style="display: none">
-		<ol id="leaders">
-
-		</ol>
-
-	</div>
-	<div id="stats" style="display: none">
-		<ul id="my_stats">
-		</ul>
-	</div>
-
-	<div class="circle-set clear">
-		
-	<div class="dual-circle">
-
-		<div class="player">
-			<div class="score" >
-				<form>
-				<input id="score1" type="text" placeholder="score">
-				<input type="submit" id="submit1">
-				</form>
-			</div>
-
-			<div class="circle" id="circle1" name="user1">
-				<p class="hash-tag" id="hash1">
-				</p>
-			</div>
-		</div>
-
-		<div class="player">
-			<div class="score">
-				<form>
-				<input id="score2" type="text" placeholder="score">
-				<input type="submit" id="submit2">
-				</form>
-			</div>
-
-			<div class="circle" id="circle2" name="user2">
-				<p class="hash-tag" id="hash2">
-				</p>
-			</div>
-		</div>
-	</div>
-
-	<div class="buttons clear" id="start">
-		<div class="buttons">
-			<button class="ticker" id="ticker1"> 0 </button>
-			<button id="start-button">Start!</button>		<button class="ticker" id="ticker2"> 0 </button>
-		</div>
-	</div>
 	</div>
 </div>
 
+<div class='right-container'>
 
+		<div class="banner">
+			<h1>TwitterBURST!</h1>
+		</div>
+
+		<div class="notice-banner">
+			<% if flash[:notice] %>
+				<p class="notice"><%= flash[:notice] %></p>
+			<% end %>
+			<% if current_user %>
+				<p class="welcome-bar"> Welcome, <%= current_user.name %>!</p> 
+				<img id="profile-pic" src="<%= current_user.pic%>"/>
+			<% end %>
+			</div> 
+
+		<div id="leaderboard" style="display: none">
+			<ol id="leaders"></ol>
+		</div>
+		<div id="stats" style="display: none">
+			<ul id="my_stats"></ul>
+		</div>
+
+		<div class='hashtags'>
+			<input type='text' id='first-hashtag' placeholder='Your hashtag!'></input>
+			<h3 id="hash2"></h3>
+		</div>
+
+		<div class="circle-set">	
+			<div class="circle" id="circle-one"></div>
+			<div class="circle" id="circle-two"></div>
+		</div>
+
+			<div class='tweet-bodies'>
+				<div class='tweet-one'>
+					<h3 id='first-hashtag-result'>hello</h3>
+				</div>
+				<div class='tweet-two'>
+					<h3 id='second-hashtag-result'>goodbye</h3>
+				</div>
+			</div>
+
+			<div class="button-set">
+				<h3 id='first-hashtag'></h3>
+				<h3 id='first-hashtag-result'></h3>
+				<button id="ticker-one">0</button>
+				<button id="start-button">Start!</button>
+				<button id="ticker-two">0</button>
+			</div>
+			<div class='footer'></div>
+	</div>
+</div>
 
 

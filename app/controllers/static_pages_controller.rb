@@ -4,10 +4,7 @@ class StaticPagesController < ApplicationController
   end
 
   def computer
-
-    
-
-  	trending = ["#getperezout", "#giftlikethat", "#rajoyentelecinco", "#askbeckyg", "#whenlarrywas18", "#estarianecesitando", "#cbb", "#shoppershour", "#belenestebanlamejor", "#coookparamolsaa", "#worcestershirehour", "#piazzapulita", "#isoladeifamosi"]
+  	trending = ["hello", "snow", "blizzard", "happy", "sad", "yolo", "bieber", "#bikeDC", "#WDIDC4"]
 	random_tweet = trending.sample
 	@computer_choice = {tag: random_tweet}
 

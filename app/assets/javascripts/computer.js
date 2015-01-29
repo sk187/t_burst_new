@@ -1,7 +1,5 @@
 function setRandomHashTag(){
 	var url = "/computer.json";
-	console.log(url);
-	
 	$.ajax({
 		type: "GET",
 		url: url,
