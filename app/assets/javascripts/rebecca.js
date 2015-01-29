@@ -6,7 +6,6 @@ var seconds = 30;
 
 $("#start-button").on("click", function(){
   p = 0;
-	console.log("Hello");
 	interval = setInterval(counter, 1000);
   });
 
@@ -25,7 +24,6 @@ function counter(){
   
 
 function reset(){
-  console.log("This is where the game should reset");
   clearInterval(interval);
   timer.text ("Start");
   seconds = 10;

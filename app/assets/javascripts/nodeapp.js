@@ -1,5 +1,4 @@
 
-
 var first_hashtag = '';
 var second_hashtag = '';
 var numone = 0;
@@ -19,12 +18,12 @@ $('#start-button').on('click', function(e){
     first_hashtag = 'snow';
     second_hashtag = 'hi';
     query = 'first_hashtag='+ first_hashtag +'&second_hashtag='+ second_hashtag
-    console.log(first_hashtag);
-    console.log(second_hashtag);
+    // console.log(first_hashtag);
+    // console.log(second_hashtag);
     var socket = io.connect('https://twitter-burst-node.herokuapp.com/', { query: query, 'forceNew':true });
     socket.on('stream', function(tweet){
         if (tweet.search(first_hashtag) != -1){
-            console.log(tweet);
+            // console.log(tweet);
             $('#first-hashtag-result').text(tweet);
             numone = $('#ticker-one').text();
             numone ++;
