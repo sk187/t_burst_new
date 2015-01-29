@@ -4,9 +4,6 @@ var p = 0;
 var seconds = 30;
 
 
-   
-    
-
 $("#start-button").on("click", function(){
   p = 0;
 	console.log("Hello");

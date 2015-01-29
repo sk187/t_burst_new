@@ -69,12 +69,13 @@ body{
   text-align: center;
   font-family: 'Montserrat Subrayada', sans-serif;
   font-size: 85px;
-  color: #184E83;
+  color: white;
   padding-bottom: 20px;
 }
 
 .notice-banner{
   background-color: #c0deed;
+  font-family: 'Avenir';
 }
 
 #profile-pic{
@@ -83,6 +84,8 @@ body{
 }
 
 .welcome-bar{
+  font-family: 'Avenir';
+  background-color: #c0deed;
   display: inline-block;
   text-align: center;
 }

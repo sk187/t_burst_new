@@ -1,3 +1,4 @@
+
 function setRandomHashTag(){
 	var url = "/computer.json";
 	$.ajax({
