@@ -7,7 +7,7 @@ var seconds = 30;
    
     
 
-$("#start-button").unbind("click").on("click", function(){
+$("#start-button").on("click", function(){
   p = 0;
 	console.log("Hello");
 	interval = setInterval(counter, 1000);

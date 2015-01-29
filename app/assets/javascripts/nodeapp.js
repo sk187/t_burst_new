@@ -11,7 +11,7 @@ var query = ''
       $('#second-hashtag-result').text(' ');
     };
 
-$('#start-button').unbind('click').on('click', function(){
+$('#start-button').on('click', function(){
     resetFields();
     first_hashtag = $('#first-hashtag').val();
     second_hashtag = $('#hash2').text();
