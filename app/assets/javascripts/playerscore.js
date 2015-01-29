@@ -1,56 +1,81 @@
+// $('#start-button').on('click', function(event){
+// 	event.preventDefault;
 
-// 	// Gets Value of Ticker Box 1
-// 	var scoreOne = $('#ticker-one').text();
-// 	// Gets Value of Ticker Box 2 
-// 	var scoreTwo = $("#ticker-two").text();
+window.setInterval(function(){
+	// Gets Value of Ticker Box 1
+  var scoreOne = $('#ticker-one').text();
+	// Gets Value of Ticker Box 2 
+	var scoreTwo = $("#ticker-two").text();
+	// Turns the value to int
+	parseInt(scoreOne);
+	parseInt(scoreTwo);
+	// Gets the difference between the scores
+	var size = 50
+	var ratioOne = (scoreOne/scoreTwo);
+	var ratioTwo = (scoreTwo/scoreOne);
+	console.log("Ratio One is " + ratioOne);
+	console.log("Ratio Two is " + ratioTwo);
 
-// 	// Turns the value to int
-// 	parseInt(scoreOne);
-// 	parseInt(scoreTwo);
+	if(ratioOne > 6){
+		$("#circle-one").css("height", function (height){
+		return height+ 300;
+		});
 
-// 	// Gets the difference between the scores
-// 	var size = 50
-// 	var ratioOne = (scoreOne/scoreTwo);
-// 	var ratioTwo = (scoreTwo/scoreOne);
-// 	console.log("Ratio One is " + ratioOne);
-// 	console.log("Ratio Two is " + ratioTwo);
+		$("#circle-one").css("width", function (width){
+		return width+ 300;
+		});
 
-// 	if(ratioOne > 6){
-// 		$("#circle-one").css("height", function (height){
-// 		return height+ 300;
-// 		});
+		$("#circle-two").css("height", function (height){
+		return height+ 25;
+		});
 
-// 		$("#circle-one").css("width", function (width){
-// 		return width+ 300;
-// 		});
-
-// 		$("#circle-two").css("height", function (height){
-// 		return height+ 25;
-// 		});
-
-// 		$("#circle-two").css("width", function (width){
-// 		return width+ 25;
-// 		});
-// 	}
+		$("#circle-two").css("width", function (width){
+		return width+ 25;
+		});
+	}
 	
-// 	else{
-// 		$("#circle-one").css("height", function (height){
-// 		return height+ (ratioOne * size);
-// 		});
+	else if (ratioTwo > 6) {
 
-// 		$("#circle-one").css("width", function (width){
-// 		return width+ (ratioOne * size);
-// 		});
+		$("#circle-one").css("height", function (height){
+		return height+ 25;
+		});
 
-// 		$("#circle-two").css("height", function (height){
-// 		return height+ (ratioTwo * size);
-// 		});
+		$("#circle-one").css("width", function (width){
+		return width+ 25;
+		});
 
-// 		$("#circle-two").css("width", function (width){
-// 		return width+ (ratioTwo * size);
-// 		});
-// 	}	
-// });
+		$("#circle-two").css("height", function (height){
+		return height+ 300;
+		});
+
+		$("#circle-two").css("width", function (width){
+		return width+ 300;
+		});
+	}
+
+	else{
+		$("#circle-one").css("height", function (height){
+		return height+ (ratioOne * size);
+		});
+
+		$("#circle-one").css("width", function (width){
+		return width+ (ratioOne * size);
+		});
+
+		$("#circle-two").css("height", function (height){
+		return height+ (ratioTwo * size);
+		});
+
+		$("#circle-two").css("width", function (width){
+		return width+ (ratioTwo * size);
+		});
+	}	
+}, 10);	
+
+
+
+
+
 
 // $("#submit2").unbind("click");
 // $("#submit2").unbind("click").on("click", function(event){
@@ -83,21 +108,7 @@
 // 	console.log("Ratio Two is " + ratioTwo);
 	
 // 	if(ratioTwo > 6){
-// 		$("#circle-one").css("height", function (height){
-// 		return height+ 25;
-// 		});
-
-// 		$("#circle-one").css("width", function (width){
-// 		return width+ 25;
-// 		});
-
-// 		$("#circle-two").css("height", function (height){
-// 		return height+ 300;
-// 		});
-
-// 		$("#circle-two").css("width", function (width){
-// 		return width+ 300;
-// 		});
+// 	
 // 	}
 
 // 	else {
