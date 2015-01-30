@@ -5,6 +5,8 @@
 	<img><%=image_tag "Twitter_logo_blue.png" %></img>
 		<ul>
 		<% if current_user %>
+			<li><img id="profile-pic" src="<%= current_user.pic%>"/></li>
+			<li id='you'><%= current_user.name %></li>
 			<li id="leaderboard_link">Leaderboard</li>
 			<li id="your_stats">Your Stats</li>
 			<li id="user_nav"><%= link_to "Sign Out", signout_path %></li>
@@ -23,18 +25,14 @@
 			<h1>TwitterBURST!</h1>
 		</div>
 
-		<div class="notice-banner">
-			<% if flash[:notice] %>
-				<p class="notice"><%= flash[:notice] %></p>
-			<% end %>
-			<% if current_user %>
-				<p class="welcome-bar"> Welcome, <%= current_user.name %>!</p> 
-				<img id="profile-pic" src="<%= current_user.pic%>"/>
-			<% end %>
-			</div> 
+	<!-- 	<div class="notice-banner">
+			<%# if flash[:notice] %>
+				<p class="notice"><%#= flash[:notice] %></p>
+			<%# end %>
+		</div>  -->
 
 		<div id="leaderboard" style="display: none">
-			<ul id="leaders"></ul>
+			<ul id="leaders">LEADERBOARD
 				<li id="leader-one"></li>
 				<li id="leader-two"></li>
 				<li id="leader-three"></li>
@@ -45,9 +43,10 @@
 				<li id="leader-eight"></li>
 				<li id="leader-nine"></li>
 				<li id="leader-ten"></li>
+			</ul>
 		</div>
 		<div id="stats" style="display: none">
-			<ul id="my_stats">
+			<ul id="my_stats">YOUR STATS
 				<li id="stats-name"></li>
 				<li id="stats-wins"></li>
 				<li id="stats-losses"></li>
@@ -56,7 +55,7 @@
 		</div>
 
 		<div class='hashtags'>
-			<input type='text' id='first-hashtag' placeholder='Your hashtag!'></input>
+			<input type='text' id='first-hashtag-input' placeholder='Your hashtag!'></input>
 			<h3 id="hash2"></h3>
 		</div>
 

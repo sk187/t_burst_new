@@ -20,18 +20,19 @@ body{
   margin: 0;
   padding: 0;
   background: #565051;
-  min-width: 500px
+  min-width: 500px;
+  color: black;
 }
 
 .left-container{
   float: left;
-  width: 17%;
+  width: 20%;
   min-width: 100px;
 }
 
 .right-container{
   float: left;
-  width: 83%;
+  width: 80%;
   min-width: 400px;
 }
 
@@ -50,7 +51,7 @@ body{
   font-family: "Avenir";
   font-weight: 600;
   font-size: 18px;
-  padding-top: 10em;
+  padding-top: 1.5em;
   padding-right: 20px;
   color: white;
 }
@@ -59,6 +60,10 @@ body{
   list-style-type: none;
 }
 
+/*.nav li :hover{
+  color: red;
+}*/
+
 .left-container img{
   height: 100px;
   width: auto;
@@ -66,31 +71,56 @@ body{
 
 #leaderboard {
   color: white;
+  font-family: 'Avenir';
+  font-size: 13pt;
+  font-weight: bold;
+}
+
+#leaderboard li{
+  list-style-type: none;
+  font-family: 'Avenir';
+  font-size: 12pt;
+  font-weight: normal;
 }
 
 #stats {
   color: white;
+  font-family: 'Avenir';
+  font-size: 13pt;
+  font-weight: bold;
 }
+
+#stats li{
+  color: white;
+  list-style-type: none;
+  font-family: 'Avenir';
+  font-size: 12pt;
+  font-weight: normal;
+}
+
+
 
 /*HEADER*/
 
 .banner{
   margin: 0;
-  background-color: #c0deed;
+  background-color: #565051;
 }
 
 .banner h1{
   margin: 0;
-  text-align: center;
+  margin-left: 70px;
   font-family: 'Montserrat Subrayada', sans-serif;
-  font-size: 85px;
-  color: white;
-  padding-bottom: 20px;
+  font-size: 75px;
+  color: #c0deed;
 }
 
 .notice-banner{
+  text-align: center;
+  margin-left: 70px;
   background-color: #c0deed;
   font-family: 'Avenir';
+  font-weight: bold;
 }
 
 #profile-pic{
@@ -115,7 +145,7 @@ body{
 
 .hashtags h3{
   display: inline-block;
-  padding: 0px 70px;
+  padding: 10px 70px 10px 70px;
   text-align: center;
   font-size: 35px;
 }
@@ -125,25 +155,26 @@ body{
   padding-left: 150px;
 }*/
 
-#first-hashtag {
+#first-hashtag-input {
   height: 25px;
   width: 175px;
+  border: solid black 5px;
 }
 /*CIRCLES*/
 
 .circle-set{
   background-color: #c0deed;
   text-align: center;
-  min-height: 300px;
+  min-height: 200px;
 }
 
 .circle {
-  background: #f00;
+  background: #FFA017;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   display: inline-block;
-  margin: 0 75px;
+  margin: 20px 75px 20px 0px;
 }
 
 /*TWEETS*/
@@ -151,7 +182,7 @@ body{
 .tweet-bodies{
   background: #c0deed;
   height: 110px;
-  text-align: center
+  text-align: center;
 }
 
 .tweet-one{
@@ -178,7 +209,6 @@ body{
 .button-set{
   background-color: #c0deed;
   text-align: center;
-  padding: 2em 0;
 }
 
 
@@ -191,20 +221,21 @@ button {
   text-transform: uppercase;
   width: 150px;
   height: 150px;
-  background: #184E83;
+  background: #574F51;
   font-size: 30px;
   font-family: "Avenir";
   font-weight: bolder;
   margin: 0;
+  color: white;
 }
 
 #ticker-one {
-  background: white;
+  background: #574F51;
   font-size: 30px;
 }
 
 #ticker-two {
-  background: white;
+  background: #574F51;
   font-size: 30px;
 }
 
