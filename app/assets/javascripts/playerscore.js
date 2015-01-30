@@ -18,22 +18,22 @@ circleSizer = window.setInterval(function(){
 		});
 
 		$("#circle-two").css("height", function (height){
-		return height+ 25;
+		return height+ 50;
 		});
 
 		$("#circle-two").css("width", function (width){
-		return width+ 25;
+		return width+ 50;
 		});
 	}
 	
 	else if (ratioTwo > 3) {
 
 		$("#circle-one").css("height", function (height){
-		return height+ 25;
+		return height+ 50;
 		});
 
 		$("#circle-one").css("width", function (width){
-		return width+ 25;
+		return width+ 50;
 		});
 
 		$("#circle-two").css("height", function (height){

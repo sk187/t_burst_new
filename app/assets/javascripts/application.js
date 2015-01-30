@@ -24,11 +24,6 @@ function resetFields(){
  };
 
 $('#reset-button').click(function(){
-	resetFields();
-
-});
-
-$('#reset-button').click(function(){
 	var matchData = {
 		hashtag_one_body : null,
 		hashtag_two_body : null,
@@ -41,13 +36,22 @@ $('#reset-button').click(function(){
 	};
 	var oneScore = parseInt($('#ticker-one').text()); 
 	var twoScore = parseInt($('#ticker-two').text());
-	console.log(oneScore);
-	console.log(twoScore);
 
-	// $.ajax({
-	// 	url: '/matches',
-	// 	data: {match: matchData},
-	// 	dataType: 'json',
-	// 	type: 'POST'
-	// });
+	if (oneScore > twoScore){
+		matchData.winning_player = 'user'
+		matchData.winning_hashtag_score = oneScore;
+	} else if (twoScore > oneScore){
+		matchData.losing_player = 'user';
+		matchData.losing_hashtag_score = twoScore;
+	}
+
+	 $.ajax({
+	 	url: '/matches',
+	 	data: {match: matchData},
+	 	dataType: 'json',
+	 	type: 'POST'
+	 });
+
+	resetFields();
 });
+
