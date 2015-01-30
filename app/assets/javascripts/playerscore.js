@@ -1,3 +1,11 @@
+ 
+// $('#hashSubmit').click(function (event){
+//     event.preventDefault();
+//     var hash = $('#first-hashtag-input').val();
+//     console.log(hash);
+// });
+
+
 circleSizer = window.setInterval(function(){
 	// Gets Value of Ticker Box 1
   	var scoreOne = parseInt($('#ticker-one').text());

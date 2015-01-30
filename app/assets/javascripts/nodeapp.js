@@ -10,9 +10,10 @@ var numtwo = 0;
       $('#second-hashtag-result').text(' ');
     };
 
+
 $('#start-button').on('click', function(){
     resetFields();
-    var first_hashtag = $('#first-hashtag').val();
+    var first_hashtag = $('#first-hashtag-input').val();
     var second_hashtag = $('#hash2').text();
     console.log(first_hashtag);
     console.log(second_hashtag);
